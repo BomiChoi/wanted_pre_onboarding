@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 LOCAL_APPS = [
     "app.users.apps.UsersConfig",
+    "app.companies.apps.CompaniesConfig",
 ]
 
 DJANGO_APPS = [
