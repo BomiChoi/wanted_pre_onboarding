@@ -1,6 +1,6 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from .models import Post
-from .serialiers import PostSerializer
+from .serializers import PostSerializer
 
 
 # Create your views here.
