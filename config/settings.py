@@ -34,6 +34,10 @@ LOCAL_APPS = [
     "app.applications.apps.ApplicationsConfig",
 ]
 
+THIRD_PARTY_APPS = [
+    "rest_framework",
+]
+
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,7 +47,7 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS
+INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DJANGO_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
