@@ -10,3 +10,6 @@ class Application(models.Model):
     class Meta:
         verbose_name = '지원현황'
         verbose_name_plural = verbose_name
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'post'], name='unique_order_product')
+        ]
