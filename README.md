@@ -26,3 +26,7 @@ ERD - https://www.erdcloud.com/d/QSebd9ueurZkwimMS
 | DELETE     | /posts/&lt;id&gt;        | 채용공고를 삭제합니다.      |
 | POST       | /applications            | 채용공고에 지원합니다.      |
 | DELETE     | /applications/&lt;id&gt; | 채용공고 지원을 취소합니다.   |
+
+## 사이트 링크
+
+https://wanted-pre-onboading.herokuapp.com/
