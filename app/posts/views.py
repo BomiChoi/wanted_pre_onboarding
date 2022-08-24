@@ -2,7 +2,7 @@ from django.db.models import Q
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from .models import Post
-from .serializers import PostSerializer
+from .serializers import PostSerializer, PostDetailSerializer
 
 
 # Create your views here.
@@ -27,4 +27,4 @@ class PostListCreateView(ListCreateAPIView):
 
 class PostRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    serializer_class = PostDetailSerializer
