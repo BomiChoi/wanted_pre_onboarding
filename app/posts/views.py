@@ -1,3 +1,4 @@
+from django.contrib.postgres.aggregates import ArrayAgg
 from django.db.models import Q
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
@@ -26,5 +27,5 @@ class PostListCreateView(ListCreateAPIView):
 
 
 class PostRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.annotate(company_posts=ArrayAgg('company__posts'))
     serializer_class = PostDetailSerializer

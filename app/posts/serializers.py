@@ -37,6 +37,7 @@ class PostDetailSerializer(serializers.ModelSerializer):
     skill = serializers.CharField()
     content = serializers.CharField()
     created_at = serializers.DateTimeField(read_only=True)
+    company_posts = serializers.ListField(child=serializers.IntegerField())
 
     class Meta:
         model = Post
@@ -51,4 +52,5 @@ class PostDetailSerializer(serializers.ModelSerializer):
             'skill',
             'content',
             'created_at',
+            'company_posts'
         )
